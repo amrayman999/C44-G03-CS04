@@ -290,23 +290,23 @@ namespace Assignment
             #endregion
 
             #region Question 17
-            Console.Write("Enter time: ");
-            int timeInput = int.Parse(Console.ReadLine());
-            switch (timeInput)
-            {
-                case >= 2 and < 3:
-                    Console.WriteLine("highly effecient");
-                    break;
-                case >= 3 and < 4:
-                    Console.WriteLine("instructed to increase thier effeciency");
-                    break;
-                case >= 4 and <= 5:
-                    Console.WriteLine("provided with the training to enhance speed");
-                    break;
-                case > 5:
-                    Console.WriteLine("leave the company");
-                    break;
-            }
+            //Console.Write("Enter time: ");
+            //int timeInput = int.Parse(Console.ReadLine());
+            //switch (timeInput)
+            //{
+            //    case >= 2 and < 3:
+            //        Console.WriteLine("highly effecient");
+            //        break;
+            //    case >= 3 and < 4:
+            //        Console.WriteLine("instructed to increase thier effeciency");
+            //        break;
+            //    case >= 4 and <= 5:
+            //        Console.WriteLine("provided with the training to enhance speed");
+            //        break;
+            //    case > 5:
+            //        Console.WriteLine("leave the company");
+            //        break;
+            //}
             #endregion
         }
     }
@@ -323,6 +323,6 @@ namespace Assignment
             Console.Write("Enter y coordinate: ");
             this.y = int.Parse(Console.ReadLine());
         }
-        public
+        
     }
 }
