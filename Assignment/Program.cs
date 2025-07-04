@@ -181,6 +181,40 @@
 
             }
             #endregion
+
+            #region Question 12
+            Console.Write("Enter first number: ");
+            int firstNumber = int.Parse(Console.ReadLine());
+            Console.Write("Enter second number: ");
+            int secondNumber = int.Parse(Console.ReadLine());
+            Console.Write("Enter operation: ");
+            char operation = char.Parse(Console.ReadLine());
+            int result = 0;
+            switch (operation) {
+                case '+':
+                    result = firstNumber + secondNumber;
+                    break;
+                case '-':
+                    result = firstNumber - secondNumber;
+                    break;
+                case '*':
+                    result = firstNumber * secondNumber;
+                    break;
+                case '/':
+                    if (secondNumber != 0)
+                        result = firstNumber / secondNumber;
+                    else
+                        Console.WriteLine("Cannot divide by zero");
+                    break;
+                case '%':
+                    result = firstNumber % secondNumber;
+                    break;
+                default:
+                    Console.WriteLine("Invalid operation");
+                    break;
+            }
+
+            #endregion
         }
     }
 }
