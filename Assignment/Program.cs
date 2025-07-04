@@ -73,17 +73,27 @@
             #endregion
 
             #region Question 5
-            Console.Write("Enter a character: ");
-            char character = char.Parse(Console.ReadLine());
-            string vowels = "aeiouAEIOU";
-            if (vowels.Contains(character))
+            //Console.Write("Enter a character: ");
+            //char character = char.Parse(Console.ReadLine());
+            //string vowels = "aeiouAEIOU";
+            //if (vowels.Contains(character))
+            //{
+            //    Console.WriteLine("vowel");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("consonant");
+            //}
+            #endregion
+
+            #region Question 6
+            Console.Write("Enter a number: ");
+            int number = int.Parse(Console.ReadLine());
+            for(int i = 1; i <= number; i++)
             {
-                Console.WriteLine("vowel");
+                Console.Write($"{i} ");
             }
-            else
-            {
-                Console.WriteLine("consonant");
-            }
+            Console.WriteLine();
             #endregion
         }
     }
