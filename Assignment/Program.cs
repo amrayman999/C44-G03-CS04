@@ -106,15 +106,29 @@
             #endregion
 
             #region Question 8
-            Console.Write("Enter a number: ");
+            //Console.Write("Enter a number: ");
+            //int number = int.Parse(Console.ReadLine());
+            //for (int i = 1; i <= number; i++)
+            //{
+            //    if (i % 2 == 0)
+            //    {
+            //        Console.Write($"{i} ");
+            //    }
+            //}
+            #endregion
+
+            #region Question 9
+            Console.Write("Enter number: ");
             int number = int.Parse(Console.ReadLine());
-            for (int i = 1; i <= number; i++)
+            Console.Write("Enter Power: ");
+            int power = int.Parse(Console.ReadLine());
+            int result = 1;
+            for(int i = 1; i <= power; i++)
             {
-                if (i % 2 == 0)
-                {
-                    Console.Write($"{i} ");
-                }
+                result *= number;
             }
+            Console.WriteLine($"Result: {result}");
+
             #endregion
         }
     }
