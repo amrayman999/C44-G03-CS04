@@ -231,15 +231,44 @@ namespace Assignment
             #endregion
 
             #region Question 14
-            Console.Write("Enter your number: "); 
-            int number = int.Parse(Console.ReadLine());
-            int reversedNum = 0;
-            while(number > 0)
+            //Console.Write("Enter your number: "); 
+            //int number = int.Parse(Console.ReadLine());
+            //int reversedNum = 0;
+            //while(number > 0)
+            //{
+            //    reversedNum = (reversedNum * 10) + (number % 10);
+            //    number /= 10;
+            //}
+            //Console.WriteLine($"Reversed Number: {reversedNum}");
+            #endregion
+
+            #region Question 15
+            Console.Write("Enter starting number: ");
+            int startNumber = int.Parse(Console.ReadLine());
+            Console.Write("Enter ending number: ");
+            int endNumber = int.Parse(Console.ReadLine());
+            for (int i = startNumber; i <= endNumber; i++)
             {
-                reversedNum = (reversedNum * 10) + (number % 10);
-                number /= 10;
+                bool isPrime = true;
+                if (i < 2) isPrime = false; // 0 and 1 are not prime numbers
+                else
+                {
+                    for (int j = 2; j < i; j++)
+                    {
+                        if (i % j == 0)
+                        {
+                            isPrime = false;
+                            break;
+                        }
+                    }
+                }
+                if (isPrime)
+                {
+                    Console.Write($"{i} ");
+                }
+
+
             }
-            Console.WriteLine($"Reversed Number: {reversedNum}");
             #endregion
         }
     }
