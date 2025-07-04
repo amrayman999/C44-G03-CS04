@@ -60,15 +60,29 @@
             #endregion
 
             #region Question 4
-            Console.Write("Enter a number: ");
-            int number = int.Parse(Console.ReadLine());
-            if (number % 2 == 0)
+            //Console.Write("Enter a number: ");
+            //int number = int.Parse(Console.ReadLine());
+            //if (number % 2 == 0)
+            //{
+            //    Console.WriteLine("Even");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Odd");
+            //}
+            #endregion
+
+            #region Question 5
+            Console.Write("Enter a character: ");
+            char character = char.Parse(Console.ReadLine());
+            string vowels = "aeiouAEIOU";
+            if (vowels.Contains(character))
             {
-                Console.WriteLine("Even");
+                Console.WriteLine("vowel");
             }
             else
             {
-                Console.WriteLine("Odd");
+                Console.WriteLine("consonant");
             }
             #endregion
         }
