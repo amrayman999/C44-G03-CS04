@@ -1,4 +1,6 @@
-﻿namespace Assignment
+﻿using System.Text;
+
+namespace Assignment
 {
     internal class Program
     {
@@ -153,67 +155,79 @@
             #endregion
 
             #region Question 11
-            Console.Write("Enter month number: ");
-            int month = int.Parse(Console.ReadLine());
-            switch (month)
-            {
-                case 1:
-                case 3:
-                case 5:
-                case 7:
-                case 8:
-                case 10:
-                case 12:
-                    Console.WriteLine($"Days in Month: {31}");
-                    break;
-                case 4:
-                case 6:
-                case 9:
-                case 11:
-                    Console.WriteLine($"Days in Month: {30}");
-                    break;
-                case 2:
-                    Console.WriteLine($"Days in Month: {28} or {29} according to leap year or not");
-                    break;
-                default:
-                    Console.WriteLine("Invalid month number");
-                    break;
+            //Console.Write("Enter month number: ");
+            //int month = int.Parse(Console.ReadLine());
+            //switch (month)
+            //{
+            //    case 1:
+            //    case 3:
+            //    case 5:
+            //    case 7:
+            //    case 8:
+            //    case 10:
+            //    case 12:
+            //        Console.WriteLine($"Days in Month: {31}");
+            //        break;
+            //    case 4:
+            //    case 6:
+            //    case 9:
+            //    case 11:
+            //        Console.WriteLine($"Days in Month: {30}");
+            //        break;
+            //    case 2:
+            //        Console.WriteLine($"Days in Month: {28} or {29} according to leap year or not");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Invalid month number");
+            //        break;
 
-            }
+            //}
             #endregion
 
             #region Question 12
-            Console.Write("Enter first number: ");
-            int firstNumber = int.Parse(Console.ReadLine());
-            Console.Write("Enter second number: ");
-            int secondNumber = int.Parse(Console.ReadLine());
-            Console.Write("Enter operation: ");
-            char operation = char.Parse(Console.ReadLine());
-            int result = 0;
-            switch (operation) {
-                case '+':
-                    result = firstNumber + secondNumber;
-                    break;
-                case '-':
-                    result = firstNumber - secondNumber;
-                    break;
-                case '*':
-                    result = firstNumber * secondNumber;
-                    break;
-                case '/':
-                    if (secondNumber != 0)
-                        result = firstNumber / secondNumber;
-                    else
-                        Console.WriteLine("Cannot divide by zero");
-                    break;
-                case '%':
-                    result = firstNumber % secondNumber;
-                    break;
-                default:
-                    Console.WriteLine("Invalid operation");
-                    break;
-            }
+            //Console.Write("Enter first number: ");
+            //int firstNumber = int.Parse(Console.ReadLine());
+            //Console.Write("Enter second number: ");
+            //int secondNumber = int.Parse(Console.ReadLine());
+            //Console.Write("Enter operation: ");
+            //char operation = char.Parse(Console.ReadLine());
+            //int result = 0;
+            //switch (operation) {
+            //    case '+':
+            //        result = firstNumber + secondNumber;
+            //        break;
+            //    case '-':
+            //        result = firstNumber - secondNumber;
+            //        break;
+            //    case '*':
+            //        result = firstNumber * secondNumber;
+            //        break;
+            //    case '/':
+            //        if (secondNumber != 0)
+            //            result = firstNumber / secondNumber;
+            //        else
+            //            Console.WriteLine("Cannot divide by zero");
+            //        break;
+            //    case '%':
+            //        result = firstNumber % secondNumber;
+            //        break;
+            //    default:
+            //        Console.WriteLine("Invalid operation");
+            //        break;
+            //}
+            #endregion
 
+            #region Question 13
+            Console.Write("Enter your string : ");
+            string input = Console.ReadLine();
+            StringBuilder sb = new StringBuilder("");
+            int counter = input.Length - 1;
+            while (counter >= 0)
+            {
+                sb.Append(input[counter]);
+                counter--;
+            }
+            Console.WriteLine(sb.ToString());
             #endregion
         }
     }
