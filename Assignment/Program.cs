@@ -118,17 +118,38 @@
             #endregion
 
             #region Question 9
-            Console.Write("Enter number: ");
-            int number = int.Parse(Console.ReadLine());
-            Console.Write("Enter Power: ");
-            int power = int.Parse(Console.ReadLine());
-            int result = 1;
-            for(int i = 1; i <= power; i++)
-            {
-                result *= number;
-            }
-            Console.WriteLine($"Result: {result}");
+            //Console.Write("Enter number: ");
+            //int number = int.Parse(Console.ReadLine());
+            //Console.Write("Enter Power: ");
+            //int power = int.Parse(Console.ReadLine());
+            //int result = 1;
+            //for(int i = 1; i <= power; i++)
+            //{
+            //    result *= number;
+            //}
+            //Console.WriteLine($"Result: {result}");
 
+            #endregion
+
+            #region Question 10
+            int[] marks = new int[5];
+            Console.WriteLine("Enter marks for 5 subjects : ");
+            for (int i = 0; i < marks.Length; i++)
+            {
+                marks[i] = int.Parse(Console.ReadLine());
+            }
+            int total = 0;
+            int average = 0;
+            int percentage = 0;
+            foreach (int mark in marks)
+            {
+                total += mark;
+            }
+            average = total / marks.Length;
+            percentage = (int)((float)total / (marks.Length * 100) * 100);
+            Console.WriteLine($"Total Marks: {total}");
+            Console.WriteLine($"Average Marks: {average}");
+            Console.WriteLine($"Percentage: {percentage}%");
             #endregion
         }
     }
