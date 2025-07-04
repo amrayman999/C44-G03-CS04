@@ -97,11 +97,23 @@
             #endregion
 
             #region Question 7
+            //Console.Write("Enter a number: ");
+            //int number = int.Parse(Console.ReadLine());
+            //for(int i = 1; i<= 12; i++)
+            //{
+            //    Console.Write($"{number * i} ");
+            //}
+            #endregion
+
+            #region Question 8
             Console.Write("Enter a number: ");
             int number = int.Parse(Console.ReadLine());
-            for(int i = 1; i<= 12; i++)
+            for (int i = 1; i <= number; i++)
             {
-                Console.Write($"{number * i} ");
+                if (i % 2 == 0)
+                {
+                    Console.Write($"{i} ");
+                }
             }
             #endregion
         }
