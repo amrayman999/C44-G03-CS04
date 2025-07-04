@@ -5,17 +5,33 @@
         static void Main(string[] args)
         {
             #region Question 1
+            //Console.Write("Enter a number: ");
+            //float number = float.Parse(Console.ReadLine());
+            //if(number % 3 == 0 && number % 4 == 0)
+            //{
+            //    Console.WriteLine("Yes");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("No");
+            //}
+            #endregion
+
+            #region question 2
             Console.Write("Enter a number: ");
-            float number = float.Parse(Console.ReadLine());
-            if(number % 3 == 0 && number % 4 == 0)
+            int number = int.Parse(Console.ReadLine());
+            if(number < 0)
             {
-                Console.WriteLine("Yes");
+                Console.WriteLine("Negative");
+            }
+            else if (number == 0)
+            {
+                Console.WriteLine("Zero");
             }
             else
             {
-                Console.WriteLine("No");
+                Console.WriteLine("Positive");
             }
-
             #endregion
         }
     }
