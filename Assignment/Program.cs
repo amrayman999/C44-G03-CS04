@@ -243,33 +243,66 @@ namespace Assignment
             #endregion
 
             #region Question 15
-            Console.Write("Enter starting number: ");
-            int startNumber = int.Parse(Console.ReadLine());
-            Console.Write("Enter ending number: ");
-            int endNumber = int.Parse(Console.ReadLine());
-            for (int i = startNumber; i <= endNumber; i++)
+            //Console.Write("Enter starting number: ");
+            //int startNumber = int.Parse(Console.ReadLine());
+            //Console.Write("Enter ending number: ");
+            //int endNumber = int.Parse(Console.ReadLine());
+            //for (int i = startNumber; i <= endNumber; i++)
+            //{
+            //    bool isPrime = true;
+            //    if (i < 2) isPrime = false; // 0 and 1 are not prime numbers
+            //    else
+            //    {
+            //        for (int j = 2; j < i; j++)
+            //        {
+            //            if (i % j == 0)
+            //            {
+            //                isPrime = false;
+            //                break;
+            //            }
+            //        }
+            //    }
+            //    if (isPrime)
+            //    {
+            //        Console.Write($"{i} ");
+            //    }
+            //}
+            #endregion
+
+            #region Question 16
+            Console.Write("Enter first point :");
+            Point p1 = new Point();
+            Console.Write("Enter second point :");
+            Point p2 = new Point();
+            Console.Write("Enter third point :");
+            Point p3 = new Point();
+            float slope1 = (float)(p2.y - p1.y) / (p2.x - p1.x);
+            float slope2 = (float)(p3.y - p2.y) / (p3.x - p2.x);
+
+            if (slope1 == slope2)
             {
-                bool isPrime = true;
-                if (i < 2) isPrime = false; // 0 and 1 are not prime numbers
-                else
-                {
-                    for (int j = 2; j < i; j++)
-                    {
-                        if (i % j == 0)
-                        {
-                            isPrime = false;
-                            break;
-                        }
-                    }
-                }
-                if (isPrime)
-                {
-                    Console.Write($"{i} ");
-                }
-
-
+                Console.WriteLine("Points are on the same straight line");
+            }
+            else
+            {
+                Console.WriteLine("Points are not on the same straight line");
             }
             #endregion
         }
+    }
+
+    class Point
+    {
+
+        public int x;
+        public int y;
+        public Point()
+        {
+            Console.Write("Enter x coordinate: ");
+            this.x = int.Parse(Console.ReadLine());
+            Console.Write("Enter y coordinate: ");
+            this.y = int.Parse(Console.ReadLine());
+        }
+        public
     }
 }
