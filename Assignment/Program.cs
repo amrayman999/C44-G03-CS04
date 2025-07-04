@@ -218,16 +218,28 @@ namespace Assignment
             #endregion
 
             #region Question 13
-            Console.Write("Enter your string : ");
-            string input = Console.ReadLine();
-            StringBuilder sb = new StringBuilder("");
-            int counter = input.Length - 1;
-            while (counter >= 0)
+            //Console.Write("Enter your string : ");
+            //string input = Console.ReadLine();
+            //StringBuilder sb = new StringBuilder("");
+            //int counter = input.Length - 1;
+            //while (counter >= 0)
+            //{
+            //    sb.Append(input[counter]);
+            //    counter--;
+            //}
+            //Console.WriteLine(sb.ToString());
+            #endregion
+
+            #region Question 14
+            Console.Write("Enter your number: "); 
+            int number = int.Parse(Console.ReadLine());
+            int reversedNum = 0;
+            while(number > 0)
             {
-                sb.Append(input[counter]);
-                counter--;
+                reversedNum = (reversedNum * 10) + (number % 10);
+                number /= 10;
             }
-            Console.WriteLine(sb.ToString());
+            Console.WriteLine($"Reversed Number: {reversedNum}");
             #endregion
         }
     }
