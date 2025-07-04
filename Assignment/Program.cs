@@ -132,24 +132,54 @@
             #endregion
 
             #region Question 10
-            int[] marks = new int[5];
-            Console.WriteLine("Enter marks for 5 subjects : ");
-            for (int i = 0; i < marks.Length; i++)
+            //int[] marks = new int[5];
+            //Console.WriteLine("Enter marks for 5 subjects : ");
+            //for (int i = 0; i < marks.Length; i++)
+            //{
+            //    marks[i] = int.Parse(Console.ReadLine());
+            //}
+            //int total = 0;
+            //int average = 0;
+            //int percentage = 0;
+            //foreach (int mark in marks)
+            //{
+            //    total += mark;
+            //}
+            //average = total / marks.Length;
+            //percentage = (int)((float)total / (marks.Length * 100) * 100);
+            //Console.WriteLine($"Total Marks: {total}");
+            //Console.WriteLine($"Average Marks: {average}");
+            //Console.WriteLine($"Percentage: {percentage}%");
+            #endregion
+
+            #region Question 11
+            Console.Write("Enter month number: ");
+            int month = int.Parse(Console.ReadLine());
+            switch (month)
             {
-                marks[i] = int.Parse(Console.ReadLine());
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    Console.WriteLine($"Days in Month: {31}");
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    Console.WriteLine($"Days in Month: {30}");
+                    break;
+                case 2:
+                    Console.WriteLine($"Days in Month: {28} or {29} according to leap year or not");
+                    break;
+                default:
+                    Console.WriteLine("Invalid month number");
+                    break;
+
             }
-            int total = 0;
-            int average = 0;
-            int percentage = 0;
-            foreach (int mark in marks)
-            {
-                total += mark;
-            }
-            average = total / marks.Length;
-            percentage = (int)((float)total / (marks.Length * 100) * 100);
-            Console.WriteLine($"Total Marks: {total}");
-            Console.WriteLine($"Average Marks: {average}");
-            Console.WriteLine($"Percentage: {percentage}%");
             #endregion
         }
     }
