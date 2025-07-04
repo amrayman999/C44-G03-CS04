@@ -270,22 +270,42 @@ namespace Assignment
             #endregion
 
             #region Question 16
-            Console.Write("Enter first point :");
-            Point p1 = new Point();
-            Console.Write("Enter second point :");
-            Point p2 = new Point();
-            Console.Write("Enter third point :");
-            Point p3 = new Point();
-            float slope1 = (float)(p2.y - p1.y) / (p2.x - p1.x);
-            float slope2 = (float)(p3.y - p2.y) / (p3.x - p2.x);
+            //Console.Write("Enter first point :");
+            //Point p1 = new Point();
+            //Console.Write("Enter second point :");
+            //Point p2 = new Point();
+            //Console.Write("Enter third point :");
+            //Point p3 = new Point();
+            //float slope1 = (float)(p2.y - p1.y) / (p2.x - p1.x);
+            //float slope2 = (float)(p3.y - p2.y) / (p3.x - p2.x);
 
-            if (slope1 == slope2)
+            //if (slope1 == slope2)
+            //{
+            //    Console.WriteLine("Points are on the same straight line");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Points are not on the same straight line");
+            //}
+            #endregion
+
+            #region Question 17
+            Console.Write("Enter time: ");
+            int timeInput = int.Parse(Console.ReadLine());
+            switch (timeInput)
             {
-                Console.WriteLine("Points are on the same straight line");
-            }
-            else
-            {
-                Console.WriteLine("Points are not on the same straight line");
+                case >= 2 and < 3:
+                    Console.WriteLine("highly effecient");
+                    break;
+                case >= 3 and < 4:
+                    Console.WriteLine("instructed to increase thier effeciency");
+                    break;
+                case >= 4 and <= 5:
+                    Console.WriteLine("provided with the training to enhance speed");
+                    break;
+                case > 5:
+                    Console.WriteLine("leave the company");
+                    break;
             }
             #endregion
         }
